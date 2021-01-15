@@ -20,3 +20,5 @@ bin-release/
 /.idea/
 *.class
 *.iml
+/05-rxkotlin/.gradle/checksums/
+/05-rxkotlin/build/kotlin/compileKotlin/

@@ -27,22 +27,24 @@ class MyObserver: Observer<String> {
     }
 }
 
+fun printer(data: String) = println("named function: $data")
+
 fun main(args: Array<String>) {
     val list = listOf("John", "Denise", "Phoebe", "Gryff", "Adam", "Jasmine")
     println(list)
     val observable = list.toObservable()
     //println("observable: $observable")
 
+    observable.subscribe(::printer )
+
     observable.subscribeWith(MyObserver())
 
     observable.subscribeBy{println("simpleprinter: $it")}
 
     observable.subscribeBy(  // named arguments for lambda Subscribers
-            onNext = { println(it) },
+            onNext = { println("onNext $it") },
             onError = { it.printStackTrace() },
-            onComplete = { println("Done!") }
+            onComplete = { println("onComplete Done!") }
     )
-
-    observable.subscribeBy { s -> println("Received value: $s") }
 
 }
