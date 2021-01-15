@@ -5,10 +5,6 @@ import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.kotlin.toObservable
 import io.reactivex.rxjava3.kotlin.subscribeBy
 
-fun printMe(s: String) {
-    println(s)
-}
-
 class MyObserver: Observer<String> {
     override fun onComplete() {
         println("Complete")
