@@ -27,7 +27,7 @@ fun main() {
   println("Main -> Multiple senders and one receiver")
   val msgChannel = Channel<String>()
 
-  // Launch multipel sending coroutines
+  // Launch multiple sending coroutines
   GlobalScope.launch { sendMessage("Sender1",
     msgChannel,
     "Welcome",
