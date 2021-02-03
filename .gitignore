@@ -22,3 +22,4 @@ bin-release/
 *.iml
 /05-rxkotlin/.gradle/checksums/
 /05-rxkotlin/build/kotlin/compileKotlin/
+/04-ktor/.gradle/checksums/
